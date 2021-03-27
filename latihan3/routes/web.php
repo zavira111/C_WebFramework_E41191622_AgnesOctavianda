@@ -12,9 +12,13 @@
 */
 
 //Route: :get('user', 'ManagementUserController@index');
-Route: recource('user', 'ManagementUserController');
+Route::resource('user', 'ManagementUserController');
 
-Route: :get('/'), function () {
+Route::get('/'), function () {
     return view ('welcome');
+});
+
+Route::get("/home", function(){
+    return view("home)";
 });
  
