@@ -6,41 +6,32 @@ use Illuminate\Http\Request;
 
 class ManagementUserController extends Controller
 {
-    //disini isi controller management user
     public function index(){
-        //return "Hallo ini adalah method index, dalam controller ManagementUser.";
-        $nama = "Agnes Octavianda Zavira"};
+    return "Method ini nantinya akan digunakan untuk mengambil semua data user.";
+    }
 
-        $pelajaran = ["Algoritma" & "Pemrograman", "Kalkulus","Pemrograman Web"];
+    public function create(){
+    return "Method ini nantinya akan digunakan untuk menampilkan form untuk menambah data user.";
+    }
 
-        return view('home', compact('nama','pelajaran'));
-}
-    public function create()
-    {
-        return "Method ini nantinya akan digunakan untuk menampilkan form untuk menambahkan data user";
+    public function store(Request $request){
+    return "Method ini nantinya akan digunakan untuk menciptakan data user yang baru.";
     }
     
-    public function store(Request $request)
-    {
-        return "Method ini nantinya di gunakan untuk menciptakan data user yang baru";
+    public function show(){
+    return "Method ini nantinya akan digunakan untuk mengambil satu data user dengan id=." ;
     }
 
-    public function show($id)
-    {
-        return "Method ini nantinya akan digunakan unutk mengambil satu data user dengan id-" . $id;
+    public function edit(){
+    return "Method ini nantinya akan digunakan untuk menampilkan form untuk mengubah data edit dengan data edit dengan id." ;
     }
 
-    public function edit($id)
-    {
-        return "Method ini nantinya akan digunakan untuk menampilkan form untuk mengubah data edit dengan id=" . $id;
+    public function update(Request $request ){
+    return "Method ini nantinya akan digunakan untuk mengubah data user dengan id ." ;
     }
 
-    public function update(Request $request, $id)
-    {
-        return "Method ini nantinya akan digunakan untuk mengunah data user dengan id=". $id;
+    public function destroy(){
+    return "Method ini nantinya akan digunakan untuk menghapus data user dengan id." ;
     }
-
-    public function destroy($id)
-    {
-        return "Method ini nantinya akan digunakan untuk menghapus data user dengan id=" . $id;
-    }
+    
+}

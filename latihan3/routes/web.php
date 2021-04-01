@@ -1,5 +1,9 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
+use App\Http\Controllers\ManagementUserController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,14 +15,25 @@
 |
 */
 
-//Route: :get('user', 'ManagementUserController@index');
-Route::resource('user', 'ManagementUserController');
+Route::get('/',[ManagementUserController::class, 'index']);
+Route::get('/create',[ManagementUserController::class, 'create']);
+Route::get('/store',[ManagementUserController::class, 'store']);
+Route::get('/show',[ManagementUserController::class, 'show']);
+Route::get('/edit',[ManagementUserController::class, 'edit']);
+Route::get('/update',[ManagementUserController::class, 'update']);
+Route::get('/destroy',[ManagementUserController::class, 'destroy']);
 
-Route::get('/'), function () {
-    return view ('welcome');
+Route::get("/home",function(){
+    return view("home");
 });
 
-Route::get("/home", function(){
-    return view("home)";
+Route::group(['namespace' => 'Frontend'], function()
+{
+    Route::resource('home', 'HomeController');
 });
- 
+
+
+
+
+
+
