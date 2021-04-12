@@ -11,10 +11,10 @@ class DetailProfileSeeder extends Seeder
      */
     public function run()
     {
-        //insert data ke table pegawai
+        //insert data ke table mahasiswa
         DB:: table ('mahasiswa')->insert([
             'id' => '01',
-            'nama' => 'AGNES',
+            'nama' => 'Agnes',
             'nim' => 'E41191622',
             'jenis_kelamin' => 'perempuan',
             'prodi' => 'Teknik Informatika',
